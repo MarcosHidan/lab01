@@ -21,12 +21,22 @@ public class Conta {
 
     public Double sacar(Double valor) {
         if(valor == null || valor <= 0 )
-            throw new IllegalAccessException("Valor menor");
+            throw new IllegalArgumentException("Valor menor");
 
         saldo += valor;
         return saldo;
     }
 
+    public void transferir(Conta destino, Double valor) {
+        if(this.getSaldo() < valor)
+            throw new IllegalArgumentException ("");
+
+        if(this.equals(destino))
+            throw new IllegalArgumentException("");
+
+        this.sacar(valor);
+        destino.depositar(valor);
+    }
     public Double depositar(Double valor) {
         return 0.0;
     }
@@ -55,7 +65,7 @@ public class Conta {
     public int hashCode() {
         return Objects.hash(numero);
     }
-}
+
 
 
 }
