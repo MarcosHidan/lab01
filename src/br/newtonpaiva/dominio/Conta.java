@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Conta {
 
     private Integer numero;
+    protected Double saldo;
     private Double saldo;
 
     public Conta() {
