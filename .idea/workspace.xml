@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f90b029-4ab1-4c9f-bab9-87c5ec2cadda" name="Changes" comment="feat: usa o equal para comparar as contas">
-      <change afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/ContaEspecial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/Transferencia.java" afterDir="false" />
+    <list default="true" id="0f90b029-4ab1-4c9f-bab9-87c5ec2cadda" name="Changes" comment="feat: cria interface transferencia">
+      <change afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/ContaPoupanca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/PessoaFisica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/PessoaJuridica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/ContaEspecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/newtonpaiva/dominio/ContaEspecial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677891067458</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: cria interface transferencia">
+      <created>1678496135345</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678496135345</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +147,7 @@
     <MESSAGE value="feat: cria a classe conta" />
     <MESSAGE value="feat: cria a classe Main" />
     <MESSAGE value="feat: usa o equal para comparar as contas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: usa o equal para comparar as contas" />
+    <MESSAGE value="feat: cria interface transferencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: cria interface transferencia" />
   </component>
 </project>
