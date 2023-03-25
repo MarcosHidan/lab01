@@ -3,14 +3,15 @@ package br.newtonpaiva.dominio;
 public class ContaEspecial extends Conta {
 
     private Double limite;
+
     @Override
     public Double sacar(Double valor) {
-        if(saldo + limite < valor)
+        if(getSaldo() + limite < valor)
             throw new IllegalStateException("");
 
-        saldo -= valor;
-        return saldo;
+        setSaldo(getSaldo() - valor);
 
+        return getSaldo();
     }
 
     public Double getLimite() {

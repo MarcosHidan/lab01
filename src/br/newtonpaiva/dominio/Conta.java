@@ -5,11 +5,12 @@ import java.util.Objects;
 public class Conta {
 
     private Integer numero;
-    protected Double saldo;
     private Double saldo;
 
+    private Pessoa pessoa;
+
     public Conta() {
-        this( null);
+        this(null);
     }
 
     public Conta(Integer numero) {
@@ -17,12 +18,17 @@ public class Conta {
     }
 
     public Conta(Integer numero, Double saldo) {
-
+        this.numero = numero;
+        this.saldo = saldo;
     }
 
     public Double sacar(Double valor) {
+        return 0.0;
+    }
+
+    public Double depositar(Double valor) {
         if(valor == null || valor <= 0 )
-            throw new IllegalArgumentException("Valor menor");
+            throw new IllegalArgumentException("Valor menor ou");
 
         saldo += valor;
         return saldo;
@@ -30,20 +36,22 @@ public class Conta {
 
     public void transferir(Conta destino, Double valor) {
         if(this.getSaldo() < valor)
-            throw new IllegalArgumentException ("");
+            throw new IllegalArgumentException("");
 
         if(this.equals(destino))
             throw new IllegalArgumentException("");
 
+
         this.sacar(valor);
         destino.depositar(valor);
     }
-    public Double depositar(Double valor) {
-        return 0.0;
+
+    public Integer getNumero() {
+        return numero;
     }
 
-    public Integer getNumero () {
-        return numero;
+    public void setNumero(Integer numero) {
+        this.numero = numero;
     }
 
     public Double getSaldo() {
@@ -52,6 +60,14 @@ public class Conta {
 
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     @Override
@@ -66,7 +82,4 @@ public class Conta {
     public int hashCode() {
         return Objects.hash(numero);
     }
-
-
-
 }

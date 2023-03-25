@@ -3,27 +3,31 @@ package br.newtonpaiva.dominio;
 import java.util.Objects;
 
 public class PessoaJuridica extends Pessoa{
-    private String cnpj;
+    private String cpnj;
 
-    public String getCnpj() {
-        return cnpj;
+    public String getCpnj() {
+        return cpnj;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setCpnj(String cpnj) {
+        this.cpnj = cpnj;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
         PessoaJuridica that = (PessoaJuridica) o;
-        return Objects.equals(cnpj, that.cnpj);
+        return Objects.equals(cpnj, that.cpnj);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), cnpj);
+        return Objects.hash(cpnj);
+    }
+
+    @Override
+    public void validarDocumento() {
+        System.out.println("Validando CNPJ");
     }
 }

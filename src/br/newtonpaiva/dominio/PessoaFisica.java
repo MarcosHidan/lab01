@@ -17,13 +17,17 @@ public class PessoaFisica extends Pessoa{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
         PessoaFisica that = (PessoaFisica) o;
         return Objects.equals(cpf, that.cpf);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), cpf);
+        return Objects.hash(cpf);
+    }
+
+    @Override
+    public void validarDocumento() {
+        System.out.println("Validando CPF");
     }
 }

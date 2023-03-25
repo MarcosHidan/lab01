@@ -1,9 +1,15 @@
 package br.newtonpaiva.dominio;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
+    private List<Conta> contas = new LinkedList<>();
+
+
+    public abstract void validarDocumento();
 
     public String getNome() {
         return nome;
@@ -13,21 +19,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Pessoa pessoa = (Pessoa) o;
-        return Objects.equals(nome, pessoa.nome);
+    public List<Conta> getContas() {
+        return contas;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(nome);
-    }
-
-    public void validarDocumento() {
-
-
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
     }
 }
